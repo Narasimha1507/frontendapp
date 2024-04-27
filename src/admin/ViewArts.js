@@ -2,11 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import "../customer/customerregistration.css"
 import "../customer/customergallery.css"
-import { useNavigate } from 'react-router-dom';
 import config from '../config'
 
 export default function ViewArts() {
-  const navigate = useNavigate();
   const [arts, setArts] = useState([]);
 
   const fetchArts = async () => {
