@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Razorpay from 'razorpay-checkout';
 import config from '../config'
 import axios from 'axios';
 import { useParams,useNavigate } from 'react-router-dom';
