@@ -9,7 +9,7 @@ function CardItem(props) {
           <figure className='cards__item__pic-wrap' data-category={props.label}>
             <img
               className='cards__item__img'
-              alt='Travel Image'
+              alt={props.alt} // Update the alt attribute to use the alt prop passed from the parent component
               src={props.src}
             />
           </figure>
