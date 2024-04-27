@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import '../App.css';
 import { Button } from '../Components/Button';
 import video from "../Components/homebg.mp4"
-import CardItem from '../Components/CardItem';
 import { Link } from 'react-router-dom';
 import CustomerGallery from './CustomerGallery';
 

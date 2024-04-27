@@ -3,12 +3,10 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom'; // Import useParams
 import './customergallery.css'; // Import CSS file
 import config from '../config';
-import { useNavigate } from 'react-router-dom';
 
 export default function ViewArt() {
   const [artData, setArtData] = useState(null);
   const { artId } = useParams(); // Extract email from URL parameters
-  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchArtData = async () => {
