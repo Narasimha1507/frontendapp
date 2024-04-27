@@ -86,7 +86,7 @@ export default function ViewArt() {
           </div>
           <div className="detail_button">
             <button id="dis_button" onClick={handlePayment} disabled={!artData}>
-              <a>Buy</a>
+              <p>Buy</p>
             </button>
           </div>
         </div>

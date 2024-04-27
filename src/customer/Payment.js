@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import config from '../config'
 import axios from 'axios';
-import { useParams,useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const Payment = () => {
     const [customerData, setCustomerData] = useState("");
