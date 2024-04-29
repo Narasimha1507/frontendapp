@@ -81,12 +81,7 @@ export default function Registration()
           <input type='text' placeholder='Enter User Name' id="username" value={formData.username} onChange={handleChange} required></input>
         </div>
         <div>
-          <select id="input-options" value={formData.gender}  onChange={handleChange} required>
-            <option value="">Select Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-          </select>
+        <input type='text' placeholder='Gender' id="gender" value={formData.gender} onChange={handleChange} required></input>
         </div>
         <div className='input-box'>
           <input type='date' placeholder='Create D.O.B' id="dateofbirth" value={formData.dateofbirth} onChange={handleChange} required></input>

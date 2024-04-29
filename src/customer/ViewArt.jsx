@@ -3,6 +3,8 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom'; // Import useParams
 import './customergallery.css'; // Import CSS file
 import config from '../config';
+// eslint-disable-next-line no-unused-vars
+import Razorpay from 'razorpay-checkout';
 
 export default function ViewArt() {
   const [artData, setArtData] = useState(null);
