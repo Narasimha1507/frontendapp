@@ -15,7 +15,7 @@ export default function CustomerNavBar() {
   const handleLogout = () => {
     localStorage.removeItem('isCustomerLoggedIn');
     localStorage.removeItem('customer');
-    navigate('/home');
+    navigate('/');
     window.location.reload()
   };
 

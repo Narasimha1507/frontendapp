@@ -133,7 +133,7 @@
   .card{
     background-color: white;
     width: 50vh;
-    height: 60vh;
+    height: auto;
     padding: 20px;
     margin: 0 30px 30px 0;
     border-radius: 20px;

@@ -12,7 +12,7 @@ export default function SellerNavBar() {
   const handleLogout = () => {
     localStorage.removeItem('isSellerLoggedIn');
     localStorage.removeItem('seller');
-    navigate('/home');
+    navigate('/');
     window.location.reload()
   };
   return (
