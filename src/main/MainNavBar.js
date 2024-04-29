@@ -61,8 +61,7 @@ export default function MainNavBar({onCustomerLogin,onAdminLogin,onSellerLogin})
       <Route path='/customerregistration' element={<CustomerRegistration/>}/>
       <Route path='/contactus' element={<Contact/>}/>
       <Route path='/login' element={<Login onCustomerLogin={onCustomerLogin} onSellerLogin={onSellerLogin}/>}/>
-      <Route path='/admin' element={<AdminLogin onAdminLogin={onAdminLogin}/>}/>
-      <Route path="https://onlineartgallery2563.netlify.app/adminlogin" element={<AdminLogin onAdminLogin={onAdminLogin}/>}/>
+      <Route path='/adminlogin' element={<AdminLogin onAdminLogin={onAdminLogin}/>}/>
       <Route path="*" element={<PageNotFound/>} exact />
       </Routes>
     </>
