@@ -1,6 +1,6 @@
 const config = 
 {
-    url: 'http://localhost:2563'
+    url: 'https://onlineartgallery2563.netlify.app/'
 };
 
 export default config;
