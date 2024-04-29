@@ -32,6 +32,7 @@ export default function ViewArts() {
     <div className='gallery1'>
       <h1 style={{color:"black"}}>Arts</h1>
       <div className="cards2">
+        
       {arts.map((art, index) => (
         <div className='card1'>
           <img src={`${config.url}/artimage/${art.file}`} alt="art" style={{ width: '400px', height: '250px' }} />

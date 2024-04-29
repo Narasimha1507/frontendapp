@@ -8,24 +8,23 @@ import config from '../config'
 export default function CustomerGallery() {
   const navigate = useNavigate();
   const [arts, setArts] = useState([]);
+  const [loading, setLoading] = useState(true); // Add loading state
 
   const fetchArts = async () => {
     try {
       const response = await axios.get(`${config.url}/viewarts`);
       setArts(response.data);
+      setLoading(false); // Set loading to false when data is fetched
     } catch (error) {
       console.error(error.message);
+      setLoading(false); // Set loading to false on error
     }
   };
 
   const viewart = async (artId) => {
-    try 
-    {
+    try {
       navigate(`/viewart/${artId}`)
-      window.location.reload()
-    } 
-    catch (error) 
-    {
+    } catch (error) {
       console.error(error.message);
     }
   }
@@ -33,20 +32,29 @@ export default function CustomerGallery() {
   useEffect(() => {
     fetchArts();
   }, []);
+
   return (
     <div className='gallery'>
-      <h1 style={{color:"black"}}>Explore Exquisite Artworks: Immerse Yourself in Epic Creations.</h1>
-      <div className="cards1">
-      {arts.map((art, index) => (
-        <div className='card' onClick={() => viewart(art.artId)}>
-          <img src={`${config.url}/artimage/${art.file}`} alt="art" style={{ width: '400px', height: '250px' }} />
-          <p id='gal'><u>Category</u> : {art.category}</p>
-          <p id='gal'><u>Title</u> :{art.title}</p>
-          <p id='gal'><u>Description</u> : {art.description}</p>
-          <p id='gal'><u>Price</u> : {art.price}</p>
+      <h1 style={{ color: "black" }}>Explore Exquisite Artworks: Immerse Yourself in Epic Creations.</h1>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <div className="cards1">
+          {arts.length === 0 ? (
+            <h1>No arts found.</h1>
+          ) : (
+            arts.map((art, index) => (
+              <div className='card' key={index} onClick={() => viewart(art.artId)}>
+                <img src={`${config.url}/artimage/${art.file}`} alt="art" style={{ width: '400px', height: '250px' }} />
+                <p id='gal'><u>Category</u> : {art.category}</p>
+                <p id='gal'><u>Title</u> :{art.title}</p>
+                <p id='gal'><u>Description</u> : {art.description}</p>
+                <p id='gal'><u>Price</u> : {art.price}</p>
+              </div>
+            ))
+          )}
         </div>
-      ))}
-      </div>
+      )}
     </div>
   )
 }
