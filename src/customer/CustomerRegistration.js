@@ -80,7 +80,7 @@ export default function Registration()
         <div className='input-box'>
           <input type='text' placeholder='Enter User Name' id="username" value={formData.username} onChange={handleChange} required></input>
         </div>
-        <div>
+        <div className='input-box'>
         <input type='text' placeholder='Gender' id="gender" value={formData.gender} onChange={handleChange} required></input>
         </div>
         <div className='input-box'>
