@@ -1,6 +1,6 @@
 const config = 
 {
-    url: 'https://onlineartgallery2563.netlify.app/'
+    url: 'https://backendapp-5t7a.onrender.com'
 };
 
 export default config;
