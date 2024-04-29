@@ -3,7 +3,6 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom'; // Import useParams
 import './customergallery.css'; // Import CSS file
 import config from '../config';
-import Razorpay from 'razorpay-checkout';
 
 export default function ViewArt() {
   const [artData, setArtData] = useState(null);
